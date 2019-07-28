@@ -1,0 +1,11 @@
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\bin\Release\netcoreapp2.1\ConsoleProject1.deps.json
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\bin\Release\netcoreapp2.1\ConsoleProject1.runtimeconfig.json
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\bin\Release\netcoreapp2.1\ConsoleProject1.runtimeconfig.dev.json
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\bin\Release\netcoreapp2.1\ConsoleProject1.dll
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\bin\Release\netcoreapp2.1\ConsoleProject1.pdb
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\obj\Release\netcoreapp2.1\ConsoleProject1.csprojAssemblyReference.cache
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\obj\Release\netcoreapp2.1\ConsoleProject1.csproj.CoreCompileInputs.cache
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\obj\Release\netcoreapp2.1\ConsoleProject1.AssemblyInfoInputs.cache
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\obj\Release\netcoreapp2.1\ConsoleProject1.AssemblyInfo.cs
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\obj\Release\netcoreapp2.1\ConsoleProject1.dll
+C:\Users\rowan\Desktop\Projects\ConsoleProject1\obj\Release\netcoreapp2.1\ConsoleProject1.pdb
