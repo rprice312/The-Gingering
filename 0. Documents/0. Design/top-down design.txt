@@ -1,0 +1,104 @@
+* Top-down design (Level 1 & Level 2):
+    - Start Scene                                                           { Menu - Scene}
+        #   Play                            -> Play Scene                   { Button }
+        #   Skills and Unlocks              -> SnU Scene                    { Button }
+        #   Records                         -> Records Secene               { Button }
+        #   Settings                        -> Settings Scene               { Button }
+        #   Exit                            ->                              { Button }
+
+    - Play Scene                                                            { Menu - Scene}
+        #   Local                           -> Local Play Scene             { Button }
+        #   Daily                           -> Daily Play Scene             { Button }
+        #   Co-op                           -> Co-op Play Scene             { Button }
+        #   PvP                             -> PvP Play Scene               { Button }
+
+    - SnU (Skills and Unlocks) Scene                                        { Menu - Scene }
+        #   Skill Tree                      -> Skill Tree Scene             { Button }
+        #   Unlocks                         -> Unlocks Scene                { Button }
+
+    - Records Scene                                                         { Menu - Scene - Database }
+        #   load local database                                             { ~ Functionality }
+        #   display local database                                          { ~ Functionality }
+            > Played Stages                                                 { UI ~ Functionality}
+            > Date of played stage record                                   { UI ~ Functionality}
+            > Record time                                                   { UI ~ Functionality}
+            > Record score                                                  { UI ~ Functionality}
+
+        #   IDK
+
+    - Settings Scene                                                        { Menu - Scene}
+        #   Audio Settings                  -> Audio Settings Scene         { Button }
+        #   Video Settings                  -> Video Settings Scene         { Button }
+        #   Keyboard and Mouse Settings     -> KnM Settings Scene           { Button }
+        #   Controller Settings             -> Controller Settings Scene    { Button }
+
+
+
+* Top-down design (Level 3):
+    - Local Play Scene                                                      { Menu - Scene - Database }
+        #   Displays all avaialable levels for played                       { ~ Functionality }
+        #   Change View (Circular, details, panels, etc)                    { Drop down? }
+        #   Show Unavailable                                                { Tickbox }
+
+    - Daily Play Scene                                                      { Menu - Scene - Online }
+        #   Download relevant data from server                              { ~ Functionality }
+
+    - Co-op Play Scene                                                      { Menu - Scene - Lobby }
+        #   Get all lobby settings                                          { ~ Functionality }
+            > Type of map
+                + Which map
+            > Private/Public
+            > Number of players
+            > Etc
+
+        #   Create lobby                                                    { ~ Functionality }
+        #   Display Player and Team scores                                  { ~ Functionality }
+        #   Start                                                           { Button }
+        #   Invite players                      -> Invite Players Scene     { Button }
+        #   Exit                                -> Play Scene               { Button }
+
+    - PvP Play Scene                                                        { Menu - Scene }
+        #   IDK
+
+    - Audio Settings Scene                                                  { Menu - Scene - Database }
+        #   IDK
+
+    - Video Settings Scene                                                  { Menu - Scene - Database }
+        #   IDK
+
+    - KnM Settings Scene                                                    { Menu - Scene - Database }
+        #   IDK
+
+    - Controller Settings Scene                                             { Menu - Scene - Database }
+        #   IDK
+
+    - Skills Tree Scene                                                     { Menu - Scene - Database }
+        #   IDK
+
+    - Unlocks Scene                                                         { Menu - Scene - Database }
+        #   IDK
+
+
+
+* Top-Down Design (Level ??):
+    - Game Scene                                                            { Game - Scene }
+        #   Score Counter                                                   { UI }
+        #   Timer                                                           { UI }
+        #   Active Goal                                                     { UI }
+        #   Mini map                                                        { UI }
+        #   Direction Indicator                                             { UI }
+
+        #   Functionality
+            > getStageGoals()
+            > updateScore()
+            > updateTimer()
+            > updateGoal()
+            > updateMiniMap()
+            > updateDirectionIndicator()
+            > isFinished()                      -> saveScore()
+            > playerMovement()
+
+        #   Menu                                                            { Button }
+            > Restart                                                       { Buttong ~ Functionality }
+            > Settings                          -> In-Game Settings Scene   { Button }
+            > Exit                              ->                          { Button }
