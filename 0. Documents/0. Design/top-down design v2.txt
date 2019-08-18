@@ -1,0 +1,153 @@
+* Top-down design::
+
+Scene Template - 
+- Menu_01_Sample									{ Menu - Scene }
+#   Scene Sampe			-> Menu_02_Sample 					{ Button }
+
+MENU SCENES:
+
+	- Menu_00_Start										{ Menu - Scene }
+	#   Profile Select			-> Menu_01_Profile				{ Button }
+	#   Play				-> Menu_01_Play                			{ Button }
+	#   Achievements			-> Menu_01_Achievemnets				{ Button }
+	#   Settings				-> Menu_01_Settings				{ Button }
+        #   Exit				-> Exit Game					{ Button }
+
+		- Menu_01_Profile									{ Menu - Scene }
+		#   Select Profile			-> Menu_02_Select Profile 			{ Button }
+		#   Stats & Records			-> Menu_02_StatsAndRecords 			{ Button }
+		#   Skills & Unlocks			-> Menu_02_SkillAndUnlocks 			{ Button }
+
+			- Menu_02_Select Profile								{ Menu - Scene - Database }
+			#   load local database                                            			{ ~ Functionality }
+       			#   display local database                                          			{ ~ Functionality }
+				> Saved Profiles		                                                { Dropdown ?? }
+				> Current Profile Level & Score	                                                { UI ~ Functionality }
+				> Current Profile Time Played	                                                { UI ~ Functionality }
+			#   Create New Profile			-> Menu_03_NewProfile				{ Button }
+
+				- Menu_03_NewProfile								{ Menu - Scene - Database }
+				#   IDK					-> IDK 					{ IDK }
+
+				
+			- Menu_02_StatsAndRecords								{ Menu - Scene - Database }
+			#   load local database                                           			{ ~ Functionality }
+       			#   display local database                                        			{ ~ Functionality }
+            			> Played Stages                                             			{ UI ~ Functionality }
+            			> Date of played stage record                               			{ UI ~ Functionality }
+            			> Record time                                                			{ UI ~ Functionality }
+            			> Record score                                               			{ UI ~ Functionality }
+
+			- Menu_02_SkillAndUnlocks								{ Menu - Scene }
+			#   Skill Tree				-> Menu_03_SkillTree				{ Button }
+			#   Unlocks				-> Menu_03_Unlocks 				{ Button }
+
+				- Menu_03_SkillTree								{ Menu - Scene - Database }
+				#   IDK					-> IDK 					{ IDK }
+
+				- Menu_03_Unlocks								{ Menu - Scene - Database }
+				#   IDK					-> IDK 					{ IDK }
+
+
+		- Menu_01_Play										{ Menu - Scene }
+		#   Local				-> Game_02_PlayLocal				{ Button }
+		#   Daily				-> Game_02_PlayDaily				{ Button }
+		#   Co-op				-> Game_02_PlayCo-Op				{ Button }
+		#   PvP					-> Game_02_PlayPvP				{ Button }
+
+			- Menu_02_PlayLocal									{ Menu - Scene }
+			#   Scene Sampe			-> Menu_02_Sample 					{ Button }
+
+			- Menu_02_PlayDaily									{ Menu - Scene }
+			#   Scene Sampe			-> Menu_02_Sample 					{ Button }
+
+			- Menu_02_PlayCo-Op									{ Menu - Scene }
+			#   Scene Sampe			-> Menu_02_Sample 					{ Button }
+
+			- Menu_02_PlayPvP									{ Menu - Scene } 
+			#   Scene Sampe			-> Menu_02_Sample 					{ Button }
+
+		- Menu_01_Achievements									{ Menu - Scene }
+		#   Global Rewards			-> Menu_02_GlobalRewards			{ Button }
+		#   Knowledge Base 			-> Menu_02_KnowledgeBase			{ Button }
+
+			- Menu_02_GlobalRewards									{ Menu - Scene }
+			#   IDK					-> IDK 						{ IDK }
+
+			- Menu_02_KnowledgeBase									{ Menu - Scene }
+			#   IDK					-> IDK 						{ IDK }
+
+		- Menu_01_Settings									{ Menu - Scene }
+		#   Video				-> Menu_02_SettingsVideo			{ Button }
+		#   Audio				-> Menu_02_SettingsAudio			{ Button }
+		#   Keyboard & Mouse			-> Menu_02_SettingsKeyboardMouse		{ Button }
+		#   Controller				-> Menu_02_SettingsController			{ Button }
+
+			- Menu_02_SettingsVideo									{ Menu - Scene }
+			#   IDK					-> IDK 						{ IDK }
+
+			- Menu_02_SettingsAudio									{ Menu - Scene }
+			#   IDK					-> IDK 						{ IDK }
+
+			- Menu_02_SettingsKeyboardMouse								{ Menu - Scene }
+			#   IDK					-> IDK 						{ IDK }
+
+			- Menu_02_SettingsController								{ Menu - Scene }
+			#   IDK					-> IDK 						{ IDK }
+
+
+
+
+
+
+GAME SCENES:
+
+	- Game_02_PlayLocal									{ Menu - Scene - Database }
+        #   Displays all avaialable levels for played                       			{ ~ Functionality }
+        #   Change View (Circular, details, panels, etc)                    			{ Drop down? }
+        #   Show Unavailable                                                			{ Tickbox }
+
+	- Game_02_PlayDaily									{ Menu - Scene - Database }
+        #   Download relevant data from server                              			{ ~ Functionality }
+
+	- Game_02_PlayCo-Op									{ Menu - Scene - Database }
+        #   Get all lobby settings                                          			{ ~ Functionality }
+            > Type of map
+                + Which map
+            > Private/Public
+            > Number of players
+            > Etc
+        #   Create lobby                                                    			{ ~ Functionality }
+        #   Display Player and Team scores                                  			{ ~ Functionality }
+        #   Start                                                           			{ Button }
+        #   Invite players                      	-> Invite Players Scene     		{ Button }
+        #   Exit                                	-> Play Scene               		{ Button }
+
+	- Game_02_PlayPvP									{ Menu - Scene - Database }
+        #   IDK
+
+   
+
+
+* Top-Down Design (Level ??):
+    - Game Scene                                                            { Game - Scene }
+        #   Score Counter                                                   { UI }
+        #   Timer                                                           { UI }
+        #   Active Goal                                                     { UI }
+        #   Mini map                                                        { UI }
+        #   Direction Indicator                                             { UI }
+
+        #   Functionality
+            > getStageGoals()
+            > updateScore()
+            > updateTimer()
+            > updateGoal()
+            > updateMiniMap()
+            > updateDirectionIndicator()
+            > isFinished()                      -> saveScore()
+            > playerMovement()
+
+        #   Menu                                                            { Button }
+            > Restart                                                       { Buttong ~ Functionality }
+            > Settings                          -> In-Game Settings Scene   { Button }
+            > Exit                              ->                          { Button }
